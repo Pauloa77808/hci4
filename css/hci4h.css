@@ -57,7 +57,7 @@
   background-color: #2e2a2e;
 }
 
-.container {
+.container-index {
   width: auto;
   max-width: 680px;
   padding: 0 15px;
@@ -65,13 +65,16 @@
 }
 
 .page-titles {
-  padding: 50px;
+  margin-top: 50px;
+  margin-left: 50px;
+  margin-bottom: 100px;
+  padding: 0 15px;
   font-size: 4em;
-  color: #050305;
+  color: #090d02;
 }
 
 .uma-linha-uma-coluna {
-  border: 1px solid red;
+  border: 1px solid pink;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr;
@@ -79,23 +82,55 @@
   grid-template-areas: ".";
 }
 
-.duas-colunas-uma-linha {
+.duas-colunas-uma-linha-home {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 100px 100px;
-  grid-template-areas:
-    ". ."
-    ". ."
-    ". .";
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr;
+  gap: 10px 10px;
+  grid-template-areas: ".home-name .home-description";
+}
+
+.home-name {
+  grid-area: home-name;
+}
+.home-description {
+  grid-area: home-description;
+}
+.duas-colunas-uma-linha-publication {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 10px 10px;
+  grid-template-areas: ".publication-title .publication-reference";
+}
+
+.publication-title {
+  grid-area: publication-title;
+}
+.publication-reference {
+  grid-area: publication-reference;
+}
+
+.duas-colunas-uma-linha-projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  gap: 10px 10px;
+  grid-template-areas: ".projects-name .projects-description";
+}
+
+.projects-name {
+  grid-area: projects-name;
+}
+.projects-description {
+  grid-area: projects-description;
 }
 
 .uma-linha-seis-colunas {
-  border: 1px solid red;
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
-  gap: 50px 20px;
+  gap: 0px 20px;
   grid-template-areas:
     "f1 d1"
     "f2 d2"
@@ -130,4 +165,29 @@
 }
 .d5 {
   grid-area: d5;
+}
+
+/* PAGINA TEAMS */
+.team__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.team-nome {
+  color: #090d02;
+  font-size: 2em;
+}
+
+.team-email,
+.team-telefone,
+.team-funcao {
+  color: #686965;
+}
+
+.team-descricao {
+  color: #b3b6b1;
+}
+
+.margem-top {
+  margin-top: 50px;
 }
